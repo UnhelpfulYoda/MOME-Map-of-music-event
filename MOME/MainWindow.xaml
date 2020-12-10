@@ -8,8 +8,7 @@
         mc:Ignorable="d"
         Title="Map of music events" Height="900" Width="1600">
     <Grid>
-        <GridSplitter x:Name="map_control" HorizontalAlignment="Left" Margin="10,144,0,66" Width="1030"/>
         <TextBlock HorizontalAlignment="Left" Height="99" Margin="10,10,0,0" TextWrapping="Wrap" Text="Map of music events" VerticalAlignment="Top" Width="448" FontSize="48"/>
-        <ListBox HorizontalAlignment="Left" Height="50" Margin="1124,293,0,0" VerticalAlignment="Top" Width="404"/>
+        <WindowsPresentation:GMapControl x:Name="map" HorizontalAlignment="Left" Height="678" Margin="10,159,0,0" VerticalAlignment="Top" Width="1174" Loaded="map_Loaded"/>
     </Grid>
 </Window>
