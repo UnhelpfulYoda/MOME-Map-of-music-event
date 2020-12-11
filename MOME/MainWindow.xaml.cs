@@ -25,6 +25,12 @@ namespace MOME
         public MainWindow()
         {
             InitializeComponent();
+
+            cityComboBox.Items.Add("xml");
+            cityComboBox.Items.Add("json");
+
+            ApiClient apiClient = new ApiClient();
+            apiClient.LoadEventsData();
         }
         private void map_Loaded(object sender, RoutedEventArgs e)
         {
@@ -45,8 +51,6 @@ namespace MOME
             map.MouseWheelZoomType = MouseWheelZoomType.MousePositionAndCenter;
             map.CanDragMap = true;
             map.DragButton = MouseButton.Left;
-        } 
-
-        
+        }
     }
 }
