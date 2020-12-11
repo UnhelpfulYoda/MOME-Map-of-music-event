@@ -45,6 +45,8 @@ namespace MOME
             map.MouseWheelZoomType = MouseWheelZoomType.MousePositionAndCenter;
             map.CanDragMap = true;
             map.DragButton = MouseButton.Left;
-        }
+        } 
+
+        
     }
 }
