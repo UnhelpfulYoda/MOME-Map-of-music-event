@@ -29,6 +29,8 @@ namespace MOME
             cityComboBox.Items.Add("xml");
             cityComboBox.Items.Add("json");
 
+            cityComboBox.Items.Add("Lisbon");
+
             ApiClient apiClient = new ApiClient();
             apiClient.LoadEventsData();
         }
