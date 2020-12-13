@@ -12,7 +12,9 @@ namespace MOME
         const string API_KEY = "d89e4eb83aa95db3c184350931fa7136";
         const string URL = "https://rest.bandsintown.com/artists/scarlxrd/events?app_id=d89e4eb83aa95db3c184350931fa7136&date=all";
         const string PARAMS = "https://rest.bandsintown.com/v4/artists/scarlxrd/events/?app_id=d89e4eb83aa95db3c184350931fa7136";
+
         RestClient client = null;
+        JsonParser jsonParser = new JsonParser();
 
         public ApiClient()
         {
@@ -22,11 +24,11 @@ namespace MOME
 
         public List<EventsData> LoadEventsData(string city = "Lisbon")
         {
-            string uri = string.Format(PARAMS, city, "xml", API_KEY);
+            string uri = string.Format(PARAMS, city, "json", API_KEY);
             var request = new RestRequest(uri, Method.GET);
             var response = client.Execute(request);
             string data = response.Content;
-            return new List<EventsData>();
+            return jsonParser.ParseEventsData(data);
         }
 
 

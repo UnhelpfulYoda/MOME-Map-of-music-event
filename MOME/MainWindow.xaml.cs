@@ -26,8 +26,8 @@ namespace MOME
         {
             InitializeComponent();
 
-            cityComboBox.Items.Add("xml");
-            cityComboBox.Items.Add("json");
+            clientComboBox.Items.Add("xml");
+            clientComboBox.Items.Add("json");
 
             cityComboBox.Items.Add("Lisbon");
 

@@ -18,3 +18,5 @@ C:\Users\андрей\Desktop\Study\Программирование\sem3\Кур
 C:\Users\андрей\Desktop\Study\Программирование\sem3\Курсач\MOME(Map of music event)\MOME\obj\Debug\MOME.pdb
 C:\Users\андрей\Desktop\Study\Программирование\sem3\Курсач\MOME(Map of music event)\MOME\bin\Debug\RestSharp.dll
 C:\Users\андрей\Desktop\Study\Программирование\sem3\Курсач\MOME(Map of music event)\MOME\bin\Debug\RestSharp.xml
+C:\Users\андрей\Desktop\Study\Программирование\sem3\Курсач\MOME(Map of music event)\MOME\bin\Debug\Newtonsoft.Json.dll
+C:\Users\андрей\Desktop\Study\Программирование\sem3\Курсач\MOME(Map of music event)\MOME\bin\Debug\Newtonsoft.Json.xml
