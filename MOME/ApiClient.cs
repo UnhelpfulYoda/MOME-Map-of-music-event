@@ -10,8 +10,8 @@ namespace MOME
     class ApiClient
     {
         const string API_KEY = "d89e4eb83aa95db3c184350931fa7136";
-        const string URL = "https://rest.bandsintown.com/artists/scarlxrd/events?app_id=d89e4eb83aa95db3c184350931fa7136&date=all";
-        const string PARAMS = "https://rest.bandsintown.com/v4/artists/scarlxrd/events/?app_id=d89e4eb83aa95db3c184350931fa7136";
+        const string URL = "https://rest.bandsintown.com/artists/Eminem/events?app_id=d89e4eb83aa95db3c184350931fa7136&date=upcoming";
+        const string PARAMS = "?mode={0}&appid={1}&date={2}";
 
         RestClient client = null;
         JsonParser jsonParser = new JsonParser();
