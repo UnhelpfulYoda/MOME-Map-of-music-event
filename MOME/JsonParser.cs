@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace MOME
 {
@@ -11,8 +8,28 @@ namespace MOME
     {
         public List<EventsData> ParseEventsData(string data)
         {
-            Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(data); 
-            return new List<EventsData>();
+            List<Root> myDeserializedClass = JsonConvert.DeserializeObject <List<Root>>(data);
+            return converter(myDeserializedClass);
+        }
+
+        private List<EventsData> converter(List<Root> root)
+        {
+            List<EventsData> dataconvert = new List<EventsData>();
+            foreach(Root rt in root)
+            {
+                var events = new EventsData()
+                {
+
+                    Artists = "Eminem",   
+                    Country = rt.venue.country,
+                    City = rt.venue.city,
+                    Name = rt.venue.name,
+                    Latitude = rt.venue.latitude,
+                    Longitude = rt.venue.longitude,
+                };
+                dataconvert.Add(events);
+            }
+            return dataconvert;
         }
     }
 }

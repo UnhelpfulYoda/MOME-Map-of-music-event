@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Documents;
 
 namespace MOME
 {
@@ -23,8 +19,8 @@ namespace MOME
         public string image_url { get; set; }
         public string thumb_url { get; set; }
         public string facebook_page_url { get; set; }
-        public int tracker_count { get; set; }
-        public int upcoming_event_count { get; set; }
+        public string tracker_count { get; set; }
+        public string upcoming_event_count { get; set; }
         public string support_url { get; set; }
     }
 
@@ -45,7 +41,22 @@ namespace MOME
         public string status { get; set; }
     }
 
-    public class MyArray
+    //public class MyArray
+    //{
+    //    public string id { get; set; }
+    //    public string url { get; set; }
+    //    public DateTime datetime { get; set; }
+    //    public string title { get; set; }
+    //    public string description { get; set; }
+    //    public Artist artist { get; set; }
+    //    public Venue venue { get; set; }
+    //    public List<string> lineup { get; set; }
+    //    public List<Offer> offers { get; set; }
+    //    public string artist_id { get; set; }
+    //    public string on_sale_datetime { get; set; }
+    //}
+
+    public class Root
     {
         public string id { get; set; }
         public string url { get; set; }
@@ -58,11 +69,6 @@ namespace MOME
         public List<Offer> offers { get; set; }
         public string artist_id { get; set; }
         public string on_sale_datetime { get; set; }
-    }
-
-    public class Root
-    {
-        public List<MyArray> MyArray { get; set; }
     }
 
 

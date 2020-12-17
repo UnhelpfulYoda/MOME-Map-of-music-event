@@ -47,6 +47,7 @@ namespace MOME
             map.MaxZoom = 17;
             map.Zoom = 15;
             // установка фокуса карты
+            
             map.Position = new PointLatLng(55.012823, 82.950359);
 
             // настройка взаимодействия с картой
