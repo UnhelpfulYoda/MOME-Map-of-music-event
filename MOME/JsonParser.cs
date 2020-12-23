@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MOME
 {
-    class JsonParser
+    public class JsonParser
     {
         public List<EventsData> ParseEventsData(string data)
         {
@@ -12,14 +12,13 @@ namespace MOME
             return converter(myDeserializedClass);
         }
 
-        private List<EventsData> converter(List<Root> root)
+        public List<EventsData> converter(List<Root> root)
         {
             List<EventsData> dataconvert = new List<EventsData>();
             foreach(Root rt in root)
             {
                 var events = new EventsData()
                 {
-
                     Artists = "Eminem",   
                     Country = rt.venue.country,
                     City = rt.venue.city,

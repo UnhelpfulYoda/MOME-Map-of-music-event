@@ -12,5 +12,7 @@
         <WindowsPresentation:GMapControl x:Name="map" HorizontalAlignment="Left" Height="678" Margin="10,159,0,0" VerticalAlignment="Top" Width="1174" Loaded="map_Loaded"/>
         <ComboBox x:Name="cityComboBox" HorizontalAlignment="Left" Height="38" Margin="1288,159,0,0" VerticalAlignment="Top" Width="272"/>
         <ComboBox x:Name="clientComboBox" HorizontalAlignment="Left" Height="22" Margin="1288,109,0,0" VerticalAlignment="Top" Width="272"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="start" Content="Button" HorizontalAlignment="Left" Height="54" Margin="1324,353,0,0" VerticalAlignment="Top" Width="236" Click="start_Click"/>
     </Grid>
 </Window>

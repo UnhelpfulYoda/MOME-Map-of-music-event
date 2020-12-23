@@ -22,6 +22,10 @@ namespace MOME
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        List<CMapObject> objs = new List<CMapObject>();
+        int count;
+        List<EventsData> dataconvert = new List<EventsData>();
         public MainWindow()
         {
             InitializeComponent();
@@ -29,10 +33,13 @@ namespace MOME
             clientComboBox.Items.Add("xml");
             clientComboBox.Items.Add("json");
 
-            cityComboBox.Items.Add("Lisbon");
+            cityComboBox.Items.Add("Hasselt");
 
             ApiClient apiClient = new ApiClient();
             apiClient.LoadEventsData();
+
+
+
         }
         private void map_Loaded(object sender, RoutedEventArgs e)
         {
@@ -48,12 +55,23 @@ namespace MOME
             map.Zoom = 15;
             // установка фокуса карты
             
-            map.Position = new PointLatLng(55.012823, 82.950359);
+            map.Position = new PointLatLng(50.9333333, 5.3333333);
 
             // настройка взаимодействия с картой
             map.MouseWheelZoomType = MouseWheelZoomType.MousePositionAndCenter;
             map.CanDragMap = true;
             map.DragButton = MouseButton.Left;
+        }
+
+        private void start_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (EventsData element in dataconvert)
+            {
+                objs.Add(new AddMarker(element.Name, map.FromLocalToLatLng(Convert.ToInt32(element.Latitude), Convert.ToInt32(element.Longitude)), "location.png"));
+            }
+
+            foreach (CMapObject pl in objs)
+                map.Markers.Add(pl.getMarker());
         }
     }
 }
