@@ -2,6 +2,7 @@
 using GMap.NET.MapProviders;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,8 @@ namespace MOME
             cityComboBox.Items.Add("Hasselt");
 
             ApiClient apiClient = new ApiClient();
-            apiClient.LoadEventsData();
+            dataconvert = apiClient.LoadEventsData();
+
 
 
 
@@ -67,7 +69,10 @@ namespace MOME
         {
             foreach (EventsData element in dataconvert)
             {
-                objs.Add(new AddMarker(element.Name, map.FromLocalToLatLng(Convert.ToInt32(element.Latitude), Convert.ToInt32(element.Longitude)), "location.png"));
+                objs.Add(new AddMarker(element.Name, 
+                    new PointLatLng(Convert.ToDouble(element.Latitude, CultureInfo.InvariantCulture),
+                    Convert.ToDouble(element.Longitude, CultureInfo.InvariantCulture)),  
+                    "location.png"));
             }
 
             foreach (CMapObject pl in objs)

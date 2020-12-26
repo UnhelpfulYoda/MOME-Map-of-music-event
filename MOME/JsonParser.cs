@@ -19,7 +19,7 @@ namespace MOME
             {
                 var events = new EventsData()
                 {
-                    Artists = "Eminem",   
+                    Artists = rt.lineup[0],   
                     Country = rt.venue.country,
                     City = rt.venue.city,
                     Name = rt.venue.name,
