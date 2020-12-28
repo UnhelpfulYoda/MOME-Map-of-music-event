@@ -78,5 +78,16 @@ namespace MOME
             foreach (CMapObject pl in objs)
                 map.Markers.Add(pl.getMarker());
         }
+
+        private void start_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            foreach (EventsData inf in dataconvert)
+            {
+                objs.Add(new AddMarker(inf.Name,
+                    new PointLatLng(Convert.ToDouble(inf.Latitude, CultureInfo.InvariantCulture),
+                    Convert.ToDouble(inf.Longitude, CultureInfo.InvariantCulture)),
+                    "location.png"));
+            }
+        }
     }
 }
