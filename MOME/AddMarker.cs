@@ -14,9 +14,8 @@ namespace MOME
     {
         GMapMarker marker;
         PointLatLng location;
-        Venue venue;
 
-        public AddMarker(string title, PointLatLng location, string img) : base(title)
+        public AddMarker(string country, string city, string title, string artists, PointLatLng location, string img) : base(country, city,title,artists)
         {
             this.location = location;
             marker = new GMapMarker(location)
@@ -24,8 +23,8 @@ namespace MOME
                 Shape = new Image
                 {
                     Width = 32, // ширина маркера
-                    Height = 32, // высота маркера
-                    ToolTip = title,
+                    Height = 32, // высота маркер
+                    ToolTip = (country,city,title,artists),
                     Source = new BitmapImage(new Uri("pack://application:,,,/images/location.png")) // картинка
                 }
             };

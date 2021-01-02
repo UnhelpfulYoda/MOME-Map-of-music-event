@@ -40,22 +40,6 @@ namespace MOME
         public string url { get; set; }
         public string status { get; set; }
     }
-
-    //public class MyArray
-    //{
-    //    public string id { get; set; }
-    //    public string url { get; set; }
-    //    public DateTime datetime { get; set; }
-    //    public string title { get; set; }
-    //    public string description { get; set; }
-    //    public Artist artist { get; set; }
-    //    public Venue venue { get; set; }
-    //    public List<string> lineup { get; set; }
-    //    public List<Offer> offers { get; set; }
-    //    public string artist_id { get; set; }
-    //    public string on_sale_datetime { get; set; }
-    //}
-
     public class Root
     {
         public string id { get; set; }

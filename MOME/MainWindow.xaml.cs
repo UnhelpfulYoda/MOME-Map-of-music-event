@@ -25,23 +25,13 @@ namespace MOME
     {
 
         List<CMapObject> objs = new List<CMapObject>();
-        int count;
         List<EventsData> dataconvert = new List<EventsData>();
         public MainWindow()
         {
             InitializeComponent();
 
-            clientComboBox.Items.Add("xml");
-            clientComboBox.Items.Add("json");
-
-            cityComboBox.Items.Add("Hasselt");
-
             ApiClient apiClient = new ApiClient();
             dataconvert = apiClient.LoadEventsData();
-
-
-
-
         }
         private void map_Loaded(object sender, RoutedEventArgs e)
         {
@@ -69,25 +59,16 @@ namespace MOME
         {
             foreach (EventsData element in dataconvert)
             {
-                objs.Add(new AddMarker(element.Name, 
+                objs.Add(new AddMarker(element.Country, element.City,element.Name,element.Artists,
                     new PointLatLng(Convert.ToDouble(element.Latitude, CultureInfo.InvariantCulture),
                     Convert.ToDouble(element.Longitude, CultureInfo.InvariantCulture)),  
                     "location.png"));
             }
 
             foreach (CMapObject pl in objs)
-                map.Markers.Add(pl.getMarker());
-        }
-
-        private void start_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            foreach (EventsData inf in dataconvert)
             {
-                objs.Add(new AddMarker(inf.Name,
-                    new PointLatLng(Convert.ToDouble(inf.Latitude, CultureInfo.InvariantCulture),
-                    Convert.ToDouble(inf.Longitude, CultureInfo.InvariantCulture)),
-                    "location.png"));
-            }
+                map.Markers.Add(pl.getMarker());
+            }      
         }
     }
 }
