@@ -7,13 +7,13 @@
         xmlns:WindowsPresentation="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation" x:Class="MOME.MainWindow"
         mc:Ignorable="d"
         Title="Map of music events" Height="900" Width="1600">
-    <Grid HorizontalAlignment="Right" Width="1592">
+    <Grid HorizontalAlignment="Right" Width="1592" Background="#FF1B1D1B">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock HorizontalAlignment="Left" Height="99" Margin="10,10,0,0" TextWrapping="Wrap" Text="Map of music events" VerticalAlignment="Top" Width="448" FontSize="48" Grid.ColumnSpan="2"/>
-        <WindowsPresentation:GMapControl x:Name="map" HorizontalAlignment="Left" Height="678" Margin="10,159,0,0" VerticalAlignment="Top" Width="1174" Loaded="map_Loaded" Grid.ColumnSpan="2"/>
-        <Button x:Name="start" Content="Start" HorizontalAlignment="Left" Height="54" Margin="1250,159,0,0" VerticalAlignment="Top" Width="236" Click="start_Click" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Height="99" Margin="370,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="532" FontSize="48" Grid.ColumnSpan="2" FontFamily="Fredoka One" Foreground="#FF8A31E4"><Run Text="Map of music e"/><Run Text="vents"/></TextBlock>
+        <WindowsPresentation:GMapControl x:Name="map" HorizontalAlignment="Left" Height="678" Margin="58,114,0,0" VerticalAlignment="Top" Width="1174" Loaded="map_Loaded" Grid.ColumnSpan="2" Foreground="{x:Null}" BorderBrush="Black"/>
+        <Button x:Name="start" Content="Start" HorizontalAlignment="Left" Height="54" Margin="1304,215,0,0" VerticalAlignment="Top" Width="236" Click="start_Click" Grid.ColumnSpan="2" Background="#FF8A1DE4" FontSize="36" FontFamily="Fredoka One"/>
     </Grid>
 </Window>

@@ -17,7 +17,7 @@ namespace MOME
             client.Timeout = -1;
         }
 
-        public List<EventsData> LoadEventsData(string city = "Hasselt")
+        public List<EventsData> LoadEventsData(string city = " ")
         {
             string uri = string.Format(PARAMS, city, "json", API_KEY);
             var request = new RestRequest(uri, Method.GET);
