@@ -25,7 +25,5 @@ namespace MOME
             string data = response.Content;
             return jsonParser.ParseEventsData(data);
         }
-
-
     }
 }

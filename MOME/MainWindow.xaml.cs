@@ -26,6 +26,7 @@ namespace MOME
 
         List<CMapObject> objs = new List<CMapObject>();
         List<EventsData> dataconvert = new List<EventsData>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -63,12 +64,13 @@ namespace MOME
                     new PointLatLng(Convert.ToDouble(element.Latitude, CultureInfo.InvariantCulture),
                     Convert.ToDouble(element.Longitude, CultureInfo.InvariantCulture)),  
                     "location.png"));
+                
             }
 
             foreach (CMapObject pl in objs)
             {
                 map.Markers.Add(pl.getMarker());
-            }      
+            }
         }
     }
 }
